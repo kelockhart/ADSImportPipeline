@@ -62,6 +62,7 @@ class TestSolrAdapter(unittest.TestCase):
          'page_count': 0,
          'pubdate': u'2013-08-05',
          'publisher': u'test-Publisher',
+         'pub_abbrev': u'Test Pub.',
          'title': [u'This is of the title', u'This is of the alternate'],
          'volume': u'l24'})
 
