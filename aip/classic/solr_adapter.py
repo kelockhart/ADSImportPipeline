@@ -463,6 +463,7 @@ class SolrAdapter(object):
   def _pub(ADS_record):
     return {'pub': ADS_record['metadata']['general'].get('publication', {}).get('name', {}).get('canonical')}
 
+  @staticmethod
   def _pub_abbrev(ADS_record):
     return {'pub_abbrev': ADS_record['metadata']['general'].get('publication', {}).get('name', {}).get('abbreviation')}
 
