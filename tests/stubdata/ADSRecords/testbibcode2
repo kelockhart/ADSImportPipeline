@@ -47,7 +47,8 @@
                 ],
             "name" : {
                 "raw" : u"Astronomy and Astrophysics Supplement, v.143, p.41-59",
-                "canonical" : u"Astronomy and Astrophysics Supplement Series"
+                "canonical" : u"Astronomy and Astrophysics Supplement Series",
+                "abbreviation" : u"Test Pub.",
                 },
             "page_count" : u"19",
             "page" : u"41",
