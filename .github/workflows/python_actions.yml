@@ -42,31 +42,15 @@ jobs:
         pip install -U -r requirements.txt
         pip install -U -r dev-requirements.txt
 
-    - name: Show pytest/coverage versions
-      run: |
-        python -V
-        pip show pytest pytest-cov coverage || true
-        py.test --version
-
     - name: Test with pytest
       run: |
         py.test
 
-    - name: Find coverage outputs
-      if: always()
-      run: |
-        echo "upload pwd=$(pwd)"
-        ls -la
-
-
-#    - uses: actions/upload-artifact@v4
-#      with:
-#        name: coverage-import
-#        path: .coverage
     - uses: actions/upload-artifact@v4
       with:
         name: coverage-import
-        path: "**/.coverage"
+        path: .coverage
+        include-hidden-files: true
         if-no-files-found: error
 
 
