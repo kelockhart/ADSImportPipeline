@@ -46,11 +46,11 @@ jobs:
       run: |
         python -V
         pip show pytest pytest-cov coverage || true
-        pytest --version
+        py.test --version
 
     - name: Test with pytest
       run: |
-        py.test -
+        py.test
 
     - name: Find coverage outputs
       if: always()
