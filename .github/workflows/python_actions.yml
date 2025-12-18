@@ -42,9 +42,22 @@ jobs:
         pip install -U -r requirements.txt
         pip install -U -r dev-requirements.txt
 
+    - name: Show pytest/coverage versions
+      run: |
+        python -V
+        pip show pytest pytest-cov coverage || true
+        pytest --version
+
     - name: Test with pytest
       run: |
-        py.test
+        py.test -
+
+    - name: Find coverage outputs
+      if: always()
+      run: |
+        pwd
+        ls -la
+        find . -maxdepth 3 -name ".coverage*" -o -name "coverage.xml" -o -name "*.lcov"
 
     - uses: actions/upload-artifact@v4
       with:
