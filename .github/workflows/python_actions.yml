@@ -55,14 +55,19 @@ jobs:
     - name: Find coverage outputs
       if: always()
       run: |
-        pwd
+        echo "upload pwd=$(pwd)"
         ls -la
-        find . -maxdepth 3 -name ".coverage*" -o -name "coverage.xml" -o -name "*.lcov"
 
+
+#    - uses: actions/upload-artifact@v4
+#      with:
+#        name: coverage-import
+#        path: .coverage
     - uses: actions/upload-artifact@v4
       with:
         name: coverage-import
-        path: .coverage
+        path: "**/.coverage"
+        if-no-files-found: error
 
 
   coveralls:
