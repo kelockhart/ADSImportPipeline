@@ -62,6 +62,7 @@ class TestSolrAdapter(unittest.TestCase):
          'page_count': 0,
          'pubdate': u'2013-08-05',
          'publisher': u'test-Publisher',
+         'pub_abbrev': u'Test Pub.',
          'title': [u'This is of the title', u'This is of the alternate'],
          'volume': u'l24'})
 
@@ -124,6 +125,7 @@ class TestSolrAdapter(unittest.TestCase):
                 [u"Kurtz, Michael J.", u"Eichhorn, Guenther", u"Accomazzi, Alberto",
                  u"Grant, Carolyn S.", u"Murray, Stephen S.", u"Watson, Joyce M."],
             "author_count": 6,
+            "pub_abbrev": u"Test Pub.",
             "pub_raw": u"Astronomy and Astrophysics Supplement, v.143, p.41-59", 
         #    "cite_read_boost": 0.45,
             "first_author_facet_hier": [u"0/Kurtz, M", u"1/Kurtz, M/Kurtz, Michael J"], 

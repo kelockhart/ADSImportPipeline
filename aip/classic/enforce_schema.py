@@ -230,8 +230,9 @@ class Enforcer:
     r['publication']['altbibcode'] =    g('bibcode')
     r['publication']['publisher'] =     g('publisher')
     r['publication']['name'] = {
-      'raw':        g('journal'),
-      'canonical':  g('canonical_journal'),
+      'raw':          g('journal'),
+      'canonical':    g('canonical_journal'),
+      'abbreviation': g('canonical_journal_abbreviation'),
     }
 
     if g('series'):
