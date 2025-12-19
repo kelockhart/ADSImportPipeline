@@ -1,5 +1,5 @@
 git+https://github.com/adsabs/adsabs-pyingest.git@v1.0.10
-adsputils==v1.2.8
+adsputils==v1.5.15
 alembic==0.9.1
 numpy==1.15.0
 psycopg2==2.8.6
