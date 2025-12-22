@@ -6,7 +6,7 @@ SOLR_URLS=[
 ]
 
 #SQLALCHEMY_URL = 'sqlite:///'
-SQLALCHEMY_URL = 'postgres://user:password@localhost:15432/import_pipeline'
+SQLALCHEMY_URL = 'postgresql://user:password@localhost:15432/import_pipeline'
 SQLALCHEMY_ECHO = False
 
 CELERY_INCLUDE = ['aip.tasks']
